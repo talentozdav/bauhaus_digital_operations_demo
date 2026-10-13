@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b2c">
+<title>Bauhaus Digital Operations — Demo</title>
+<style>
+:root{--green:#173b2c;--green2:#245640;--lime:#c8ef8b;--bg:#f4f6f4;--card:#fff;--ink:#1b2921;--muted:#69766e;--line:#e1e8e2;--red:#b63a35;--amber:#986600;--shadow:0 8px 24px rgba(20,45,30,.06)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--green);color:white;padding:24px 16px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:11px;padding:0 8px}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--lime);color:var(--green);font-size:22px;font-weight:900}.brand strong{display:block;font-size:16px;letter-spacing:.06em}.brand small{color:#c4d6ca;font-size:10px;letter-spacing:.13em}.nav{display:grid;gap:6px}.nav button{border:0;background:transparent;color:#d8e4dc;padding:12px 13px;text-align:left;border-radius:10px;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:#2a5840;color:white}.nav .ico{width:20px;text-align:center}.side-note{margin-top:auto;border:1px solid #52745f;background:#214934;padding:13px;border-radius:12px;font-size:12px;color:#d5e3d9}.side-note b{color:var(--lime);display:block;margin-bottom:4px}.main{min-width:0}.topbar{height:76px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;gap:14px}.topbar h1{font-size:19px;margin:0}.topbar p{font-size:12px;color:var(--muted);margin:3px 0 0}.top-actions{display:flex;align-items:center;gap:10px}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:6px 10px;background:#fff5d7;color:#7e5b00;font-size:11px;font-weight:800;letter-spacing:.04em}.avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e3efdf;color:var(--green);font-weight:800}.content{padding:28px 30px;max-width:1450px;margin:auto}.page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}.page-head h2{margin:0 0 5px;font-size:25px;letter-spacing:-.03em}.page-head p{margin:0;color:var(--muted);font-size:14px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:white;color:var(--ink);padding:10px 14px;border-radius:9px;font-weight:650;font-size:13px}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn.primary:hover{background:var(--green2)}.btn.lime{background:var(--lime);border-color:var(--lime);color:var(--green)}.btn.danger{color:var(--red);border-color:#f0cecb}.btn.small{padding:6px 9px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.stat,.panel{background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.stat{padding:18px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-weight:650}.stat-icon{width:32px;height:32px;display:grid;place-items:center;background:#edf5eb;color:var(--green);border-radius:9px;font-size:16px}.stat strong{display:block;font-size:29px;letter-spacing:-.04em;margin:10px 0 2px}.stat small{color:var(--muted);font-size:11px}.grid-2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:16px}.panel{padding:20px;min-width:0}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.panel h3{margin:0;font-size:15px}.sub{font-size:12px;color:var(--muted);margin-top:4px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px;white-space:nowrap}th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:750;background:#f8faf8}th,td{padding:12px 10px;border-bottom:1px solid var(--line)}tbody tr:last-child td{border-bottom:0}.person{display:flex;align-items:center;gap:9px}.person-icon{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#eaf2e8;color:#27573b;font-size:11px;font-weight:800}.person strong{display:block;font-size:12px}.person small{color:var(--muted);font-size:11px}.status{display:inline-flex;padding:4px 8px;border-radius:99px;font-size:10px;font-weight:800}.status.present,.status.completed{background:#e3f5e6;color:#226a38}.status.absent,.status.open{background:#fff0d5;color:#8a5b00}.status.leave{background:#e8eafe;color:#4b50a3}.status.closed{background:#e8ece9;color:#59655e}.site-list{display:grid;gap:10px}.site-row{padding:12px;border:1px solid var(--line);border-radius:11px;display:flex;gap:12px;align-items:center}.site-symbol{width:38px;height:38px;display:grid;place-items:center;background:#edf4e9;border-radius:10px;font-size:19px}.site-row .grow{flex:1;min-width:0}.site-row strong{font-size:13px;display:block}.site-row small{color:var(--muted);font-size:11px}.progress{height:6px;background:#e8eee8;border-radius:10px;overflow:hidden;margin-top:8px}.progress span{height:100%;display:block;background:#7eb35d;border-radius:10px}.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quick{padding:15px;border:1px solid var(--line);border-radius:12px;text-align:left;background:#fff}.quick:hover{border-color:#8bad91;background:#f8fcf7}.quick i{font-style:normal;font-size:20px;display:block;margin-bottom:9px}.quick strong{font-size:12px;display:block}.quick small{color:var(--muted);font-size:11px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}.field{display:grid;gap:6px;font-size:12px;color:#47564c;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #dce5dd;border-radius:9px;background:white;padding:10px 11px;outline:none;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:#67916c;box-shadow:0 0 0 3px #dcebdd}.field textarea{min-height:90px;resize:vertical}.filters .field{min-width:150px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field.full{grid-column:1/-1}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.empty{text-align:center;color:var(--muted);padding:30px}.notice{background:#f0f7eb;border:1px solid #dbe9d4;color:#355a39;border-radius:10px;padding:12px 14px;font-size:12px;margin-bottom:17px}.warning{background:#fff8e8;border-color:#f1e0b5;color:#74591d}.report-card{border:1px solid var(--line);border-radius:12px;padding:15px;margin-bottom:10px}.report-card-head{display:flex;justify-content:space-between;gap:12px}.report-card h4{margin:0;font-size:14px}.report-card p{color:var(--muted);font-size:12px;margin:8px 0}.report-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.tag{background:#f0f3f0;padding:4px 7px;border-radius:5px}.modal-backdrop{position:fixed;inset:0;background:#10231999;display:none;align-items:center;justify-content:center;padding:18px;z-index:20}.modal-backdrop.show{display:flex}.modal{background:white;border-radius:16px;width:min(600px,100%);max-height:90vh;overflow:auto;padding:23px;box-shadow:0 20px 70px #0003}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modal-head h3{margin:0;font-size:18px}.x{border:0;background:#f1f4f1;border-radius:8px;width:32px;height:32px;font-size:18px}.toast{position:fixed;bottom:22px;right:22px;background:#173b2c;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);z-index:50;display:none;font-size:13px}.toast.show{display:block}.mobile-menu{display:none}.muted{color:var(--muted)}.hide{display:none!important}
+@media(max-width:1000px){.shell{grid-template-columns:205px minmax(0,1fr)}.content{padding:22px 18px}.topbar{padding:0 18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-2{grid-template-columns:1fr}}
+@media(max-width:650px){.shell{display:block}.sidebar{position:fixed;z-index:30;inset:0 auto 0 0;width:255px;transform:translateX(-105%);transition:transform .2s;box-shadow:15px 0 40px #0002}.sidebar.open{transform:translateX(0)}.mobile-menu{display:inline-flex}.topbar{height:66px;padding:0 14px}.topbar h1{font-size:16px}.topbar p{display:none}.top-actions .pill{display:none}.content{padding:20px 13px}.page-head{display:block}.page-head .actions{margin-top:14px}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:25px}.stat-icon{width:28px;height:28px}.panel{padding:14px}.quick-actions{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.page-head h2{font-size:22px}.top-actions{gap:5px}.top-actions .btn{padding:8px 9px}.hide-mobile{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">B</div><div><strong>BAUHAUS</strong><small>DIGITAL OPERATIONS</small></div></div>
+  <nav class="nav" id="nav">
+    <button class="active" data-page="dashboard"><span class="ico">▦</span> Overview</button>
+    <button data-page="attendance"><span class="ico">◷</span> Attendance & Hours</button>
+    <button data-page="workers"><span class="ico">♙</span> Worker Register</button>
+    <button data-page="sites"><span class="ico">⌂</span> Project Sites</button>
+    <button data-page="reports"><span class="ico">▤</span> Daily Site Reports</button>
+    <button data-page="exports"><span class="ico">⇩</span> Data & Exports</button>
+  </nav>
+  <div class="side-note"><b>DEMO ENVIRONMENT</b>All names, projects and attendance records are fictional. This prototype stores data in this browser only.</div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:10px"><button class="btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button><div><h1 id="topTitle">Overview</h1><p>Construction workforce & site management</p></div></div>
+    <div class="top-actions"><span class="pill">● DEMO MODE</span><button class="btn" id="exportTop">Export CSV</button><div class="avatar">DG</div></div>
+  </header>
+  <div class="content" id="app"></div>
+</main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop"><div class="modal"><div class="modal-head"><h3 id="modalTitle">Add record</h3><button class="x" id="modalClose" aria-label="Close">×</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const STORAGE_KEY='bauhaus-digital-operations-demo-v1';
+const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const daysAgo=n=>{const d=new Date();d.setDate(d.getDate()-n);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const isoTime=(h,m=0)=>`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+const seed={
+ workers:[
+ {id:'WK-1001',name:'Daniel Eze',role:'Site Engineer',siteId:'ST-01',phone:'0800 000 1001',status:'Active'},
+ {id:'WK-1002',name:'Musa Adamu',role:'Equipment Operator',siteId:'ST-01',phone:'0800 000 1002',status:'Active'},
+ {id:'WK-1003',name:'Grace Aondoakaa',role:'Safety Officer',siteId:'ST-02',phone:'0800 000 1003',status:'Active'},
+ {id:'WK-1004',name:'Peter Okafor',role:'Driver',siteId:'ST-02',phone:'0800 000 1004',status:'Active'},
+ {id:'WK-1005',name:'Joseph Terna',role:'General Worker',siteId:'ST-01',phone:'0800 000 1005',status:'Active'},
+ {id:'WK-1006',name:'Fatima Bello',role:'Storekeeper',siteId:'ST-03',phone:'0800 000 1006',status:'Active'},
+ {id:'WK-1007',name:'Emmanuel Iorfa',role:'Road Technician',siteId:'ST-03',phone:'0800 000 1007',status:'Active'},
+ {id:'WK-1008',name:'Sarah James',role:'Administrator',siteId:'ST-02',phone:'0800 000 1008',status:'Active'}
+ ],
+ sites:[
+ {id:'ST-01',name:'North Link Road — Sample Site',location:'Benue State (sample)',manager:'Daniel Eze',progress:68,status:'Active'},
+ {id:'ST-02',name:'Community Access Road — Sample Site',location:'Benue State (sample)',manager:'Grace Aondoakaa',progress:42,status:'Active'},
+ {id:'ST-03',name:'Drainage Rehabilitation — Sample Site',location:'Benue State (sample)',manager:'Fatima Bello',progress:84,status:'Active'}
+ ],
+ attendance:[],
+ reports:[
+ {id:'SR-2001',date:daysAgo(0),siteId:'ST-01',supervisor:'Daniel Eze',completed:'Prepared sub-base for the next road section.',workers:18,materials:'Laterite (sample): 24 loads',issues:'Awaiting inspection before next stage.',status:'Submitted',createdAt:new Date().toISOString()},
+ {id:'SR-2002',date:daysAgo(1),siteId:'ST-02',supervisor:'Grace Aondoakaa',completed:'Completed drainage channel reinforcement.',workers:14,materials:'Concrete and reinforcement (sample)',issues:'No major issues reported.',status:'Reviewed',createdAt:new Date().toISOString()},
+ {id:'SR-2003',date:daysAgo(2),siteId:'ST-03',supervisor:'Fatima Bello',completed:'Cleared work area and inspected culvert works.',workers:11,materials:'Aggregates (sample): 8 loads',issues:'One equipment maintenance request logged.',status:'Submitted',createdAt:new Date().toISOString()}
+ ]
+};
+function makeSeedAttendance(){
+ const rows=[];
+ for(let day=6;day>=0;day--){
+  const date=daysAgo(day);
+  seed.workers.forEach((w,i)=>{
+   if((i+day)%7===0)return;
+   const checkIn=isoTime(7+(i%2),10+(i*7)%40);
+   const outHour=16+(i%2);
+   const checkOut=day===0&&i%3===0?'':isoTime(outHour,10+(i*9)%45);
+   rows.push({id:`AT-${date.replaceAll('-','')}-${w.id}`,workerId:w.id,siteId:w.siteId,date,checkIn,checkOut,note:'Sample record'});
+  });
+ }
+ return rows;
+}
+seed.attendance=makeSeedAttendance();
+function load(){
+ try{const raw=localStorage.getItem(STORAGE_KEY);if(raw){const parsed=JSON.parse(raw);if(parsed&&Array.isArray(parsed.workers)&&Array.isArray(parsed.sites)&&Array.isArray(parsed.attendance)&&Array.isArray(parsed.reports))return parsed;}}catch(e){}
+ return structuredClone(seed);
+}
+let db=load(), currentPage='dashboard';
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(db));}catch(e){toast('Browser storage is unavailable. Export your records to keep them.');}}
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const siteName=id=>db.sites.find(s=>s.id===id)?.name||'Unassigned site';
+const workerName=id=>db.workers.find(w=>w.id===id)?.name||'Unknown worker';
+const initials=name=>String(name).split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase();
+const fmtDate=s=>{if(!s)return'—';const d=new Date(s+'T00:00:00');return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})};
+const minsBetween=(a,b)=>{if(!a||!b)return 0;const [ah,am]=a.split(':').map(Number),[bh,bm]=b.split(':').map(Number);let diff=bh*60+bm-(ah*60+am);if(diff<0)diff+=1440;return diff};
+const hours=(a,b)=>b? (minsBetween(a,b)/60).toFixed(1)+' h':'In progress';
+const todayRows=()=>db.attendance.filter(a=>a.date===today());
+const statusBadge=s=>`<span class="status ${String(s).toLowerCase().replace(/\s/g,'-')}">${esc(s)}</span>`;
+const stat=(icon,label,value,foot)=>`<div class="stat"><div class="stat-top"><span>${label}</span><span class="stat-icon">${icon}</span></div><strong>${value}</strong><small>${foot}</small></div>`;
+function pageHead(title,desc,actions=''){return `<div class="page-head"><div><h2>${title}</h2><p>${desc}</p></div><div class="actions">${actions}</div></div>`}
+function btn(label,action,cls=''){return `<button class="btn ${cls}" data-action="${action}">${label}</button>`}
+function render(){
+ document.getElementById('topTitle').textContent=({dashboard:'Overview',attendance:'Attendance & Hours',workers:'Worker Register',sites:'Project Sites',reports:'Daily Site Reports',exports:'Data & Exports'})[currentPage];
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===currentPage));
+ document.getElementById('app').innerHTML=({dashboard:renderDashboard,attendance:renderAttendance,workers:renderWorkers,sites:renderSites,reports:renderReports,exports:renderExports})[currentPage]();
+ document.getElementById('sidebar').classList.remove('open');
+}
+function renderDashboard(){
+ const rows=todayRows(), present=rows.length, checked=rows.filter(a=>a.checkIn).length, out=rows.filter(a=>a.checkOut).length;
+ const totalHours=rows.reduce((n,a)=>n+minsBetween(a.checkIn,a.checkOut)/60,0).toFixed(1);
+ const recent=[...db.reports].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);
+ return `${pageHead('Operations overview','A live view of workforce activity and site reporting.',btn('＋ Add attendance','addAttendance','primary')+btn('＋ New site report','addReport'))}
+ <div class="notice"><b>Demo data:</b> This dashboard uses fictional workers, projects and records. Data is saved only in this browser. Do not enter real employee or project information.</div>
+ <div class="stats">${stat('♙','Registered workers',db.workers.length,'Fictional demo register')}${stat('◷','Check-ins today',checked,`${present} attendance records for today`)}${stat('✓','Checked out',out,'Completed attendance sessions')}${stat('▤','Hours recorded today',totalHours+' h','Based on completed sessions')}</div>
+ <div class="grid-2"><section class="panel"><div class="panel-head"><div><h3>Recent attendance</h3><div class="sub">Today · ${fmtDate(today())}</div></div>${btn('View attendance','goAttendance','small')}</div>
+ ${rows.length?`<div class="table-wrap"><table><thead><tr><th>Worker</th><th>Site</th><th>Check-in</th><th>Check-out</th><th>Hours</th></tr></thead><tbody>${rows.slice(0,6).map(a=>`<tr><td><div class="person"><div class="person-icon">${initials(workerName(a.workerId))}</div><div><strong>${esc(workerName(a.workerId))}</strong><small>${esc(a.workerId)}</small></div></div></td><td>${esc(siteName(a.siteId).replace(' — Sample Site',''))}</td><td>${esc(a.checkIn||'—')}</td><td>${esc(a.checkOut||'—')}</td><td>${esc(hours(a.checkIn,a.checkOut))}</td></tr>`).join('')}</tbody></table></div>`:`<div class="empty">No attendance records for today yet.</div>`}</section>
+ <section class="panel"><div class="panel-head"><div><h3>Project sites</h3><div class="sub">Sample projects across Benue State</div></div>${btn('View sites','goSites','small')}</div><div class="site-list">${db.sites.map(s=>`<div class="site-row"><div class="site-symbol">⌂</div><div class="grow"><strong>${esc(s.name)}</strong><small>${esc(s.location)} · ${esc(s.status)}</small><div class="progress"><span style="width:${Math.max(0,Math.min(100,Number(s.progress)||0))}%"></span></div></div><b>${Number(s.progress)||0}%</b></div>`).join('')}</div></section></div>
+ <section class="panel" style="margin-top:16px"><div class="panel-head"><div><h3>Quick actions</h3><div class="sub">Create a record without paper forms.</div></div></div><div class="quick-actions"><button class="quick" data-action="addAttendance"><i>◷</i><strong>Record attendance</strong><small>Check a worker in or out</small></button><button class="quick" data-action="addReport"><i>▤</i><strong>Submit site report</strong><small>Log daily work and issues</small></button><button class="quick" data-action="addWorker"><i>♙</i><strong>Register worker</strong><small>Add a fictional worker record</small></button></div></section>
+ <section class="panel" style="margin-top:16px"><div class="panel-head"><div><h3>Latest site reports</h3><div class="sub">Recent updates from sample supervisors</div></div>${btn('All reports','goReports','small')}</div>${recent.map(reportCard).join('')||'<div class="empty">No reports yet.</div>'}</section>`;
+}
+function renderAttendance(){
+ const date=document.getElementById('filterDate')?.value||today(),site=document.getElementById('filterSite')?.value||'all',query=(document.getElementById('filterAttendanceSearch')?.value||'').toLowerCase();
+ let rows=db.attendance.filter(a=>a.date===date&&(site==='all'||a.siteId===site)&&(`${workerName(a.workerId)} ${a.workerId}`.toLowerCase().includes(query)));
+ return `${pageHead('Attendance & working hours','Record check-in/check-out and calculate hours automatically.',btn('＋ Record attendance','addAttendance','primary')+btn('Export this view','exportAttendance'))}
+ <div class="notice">For demonstration only. The prototype records manual check-in/check-out; it does not independently verify identity, GPS location or timesheets.</div>
+ <div class="filters"><label class="field">Date<input id="filterDate" type="date" value="${esc(date)}"></label><label class="field">Project site<select id="filterSite"><option value="all">All sites</option>${db.sites.map(s=>`<option value="${s.id}" ${site===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></label><label class="field" style="flex:1;min-width:180px">Search worker<input id="filterAttendanceSearch" placeholder="Name or worker ID" value="${esc(query)}"></label></div>
+ <section class="panel"><div class="panel-head"><div><h3>Attendance register</h3><div class="sub">${rows.length} record(s) · ${fmtDate(date)}</div></div></div><div class="table-wrap"><table><thead><tr><th>Worker</th><th>Project site</th><th>Date</th><th>Check-in</th><th>Check-out</th><th>Hours worked</th><th>Action</th></tr></thead><tbody>${rows.length?rows.map(a=>`<tr><td><div class="person"><div class="person-icon">${initials(workerName(a.workerId))}</div><div><strong>${esc(workerName(a.workerId))}</strong><small>${esc(a.workerId)}</small></div></div></td><td>${esc(siteName(a.siteId))}</td><td>${fmtDate(a.date)}</td><td>${esc(a.checkIn||'—')}</td><td>${esc(a.checkOut||'—')}</td><td><b>${esc(hours(a.checkIn,a.checkOut))}</b></td><td>${a.checkIn&&!a.checkOut?btn('Check out',`checkout:${a.id}`,'small primary'):btn('Edit',`editAttendance:${a.id}`,'small')}</td></tr>`).join(''):`<tr><td colspan="7"><div class="empty">No records match these filters.</div></td></tr>`}</tbody></table></div></section>`;
+}
+function renderWorkers(){
+ const query=(document.getElementById('workerSearch')?.value||'').toLowerCase();
+ const rows=db.workers.filter(w=>`${w.name} ${w.id} ${w.role} ${siteName(w.siteId)}`.toLowerCase().includes(query));
+ return `${pageHead('Worker register','A searchable digital register for workforce records.',btn('＋ Add worker','addWorker','primary')+btn('Export workers','exportWorkers'))}<div class="filters"><label class="field" style="flex:1;max-width:380px">Search workers<input id="workerSearch" placeholder="Name, ID, role or site" value="${esc(query)}"></label></div><section class="panel"><div class="panel-head"><div><h3>Registered workers</h3><div class="sub">${rows.length} of ${db.workers.length} workers</div></div></div><div class="table-wrap"><table><thead><tr><th>Worker</th><th>Role</th><th>Assigned site</th><th>Phone (fictional)</th><th>Status</th><th>Action</th></tr></thead><tbody>${rows.map(w=>`<tr><td><div class="person"><div class="person-icon">${initials(w.name)}</div><div><strong>${esc(w.name)}</strong><small>${esc(w.id)}</small></div></div></td><td>${esc(w.role)}</td><td>${esc(siteName(w.siteId))}</td><td>${esc(w.phone||'—')}</td><td>${statusBadge(w.status)}</td><td>${btn('Edit',`editWorker:${w.id}`,'small')}</td></tr>`).join('')}</tbody></table></div></section>`;
+}
+function renderSites(){
+ return `${pageHead('Project sites','Manage sample site records and progress.',btn('＋ Add site','addSite','primary')+btn('Export sites','exportSites'))}<div class="grid-2">${db.sites.map(s=>`<section class="panel"><div class="panel-head"><div><h3>${esc(s.name)}</h3><div class="sub">${esc(s.id)} · ${esc(s.location)}</div></div>${statusBadge(s.status)}</div><div style="display:flex;justify-content:space-between;align-items:end;margin:18px 0 6px"><span class="muted" style="font-size:12px">Reported progress</span><strong style="font-size:25px">${Number(s.progress)||0}%</strong></div><div class="progress"><span style="width:${Math.max(0,Math.min(100,Number(s.progress)||0))}%"></span></div><div style="margin-top:17px;font-size:12px;display:grid;gap:8px"><div><span class="muted">Site supervisor</span><br><b>${esc(s.manager||'Not assigned')}</b></div><div><span class="muted">Attendance records</span><br><b>${db.attendance.filter(a=>a.siteId===s.id).length}</b></div><div><span class="muted">Daily reports</span><br><b>${db.reports.filter(r=>r.siteId===s.id).length}</b></div></div><div class="form-actions">${btn('Edit site',`editSite:${s.id}`,'small')}${btn('New report',`addReportSite:${s.id}`,'small primary')}</div></section>`).join('')}</div>`;
+}
+function reportCard(r){return `<div class="report-card"><div class="report-card-head"><div><h4>${esc(siteName(r.siteId))}</h4><div class="sub">${esc(r.id)} · ${fmtDate(r.date)} · ${esc(r.supervisor)}</div></div>${statusBadge(r.status)}</div><p>${esc(r.completed)}</p><div class="report-meta"><span>♙ ${esc(r.workers)} workers</span><span>▤ ${esc(r.materials||'No materials logged')}</span></div>${r.issues?`<p><b>Issues:</b> ${esc(r.issues)}</p>`:''}<div class="actions">${btn('Edit',`editReport:${r.id}`,'small')}${r.status!=='Reviewed'?btn('Mark reviewed',`reviewReport:${r.id}`,'small'):''}</div></div>`}
+function renderReports(){
+ const date=document.getElementById('reportFilterDate')?.value||'all',site=document.getElementById('reportFilterSite')?.value||'all',query=(document.getElementById('reportSearch')?.value||'').toLowerCase();
+ let rows=[...db.reports].sort((a,b)=>b.date.localeCompare(a.date)).filter(r=>(date==='all'||r.date===date)&&(site==='all'||r.siteId===site)&&(`${r.id} ${r.supervisor} ${r.completed} ${siteName(r.siteId)}`.toLowerCase().includes(query)));
+ return `${pageHead('Daily site reports','Capture work completed, workforce counts, materials and blockers.',btn('＋ New report','addReport','primary')+btn('Export reports','exportReports'))}<div class="filters"><label class="field">Report date<input id="reportFilterDate" type="date" value="${date==='all'?'':esc(date)}"></label><label class="field">Project site<select id="reportFilterSite"><option value="all">All sites</option>${db.sites.map(s=>`<option value="${s.id}" ${site===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></label><label class="field" style="flex:1;min-width:180px">Search reports<input id="reportSearch" placeholder="Supervisor, report or site" value="${esc(query)}"></label><button class="btn" data-action="clearReportDate" style="align-self:end">Clear date</button></div><div>${rows.map(reportCard).join('')||'<section class="panel empty">No reports match these filters.</section>'}</div>`;
+}
+function renderExports(){
+ return `${pageHead('Data & exports','Download records for review, reporting or spreadsheet use.',btn('Export all data (JSON)','exportJSON','primary'))}<div class="notice warning"><b>Storage limitation:</b> records are stored in this browser only. This is not a secure shared database or production system. Export backups regularly during the demo.</div><div class="grid-2"><section class="panel"><div class="panel-head"><div><h3>Export CSV files</h3><div class="sub">Open in Excel, Google Sheets or similar tools.</div></div></div><div class="site-list">${[['attendance','Attendance & hours','Check-in/out records and calculated hours',db.attendance.length],['workers','Worker register','Worker IDs, roles and assigned sites',db.workers.length],['sites','Project sites','Site locations, supervisors and progress',db.sites.length],['reports','Daily site reports','Work completed, materials and issues',db.reports.length]].map(x=>`<div class="site-row"><div class="site-symbol">⇩</div><div class="grow"><strong>${x[1]}</strong><small>${x[2]} · ${x[3]} records</small></div>${btn('Download',`export:${x[0]}`,'small')}</div>`).join('')}</div></section><section class="panel"><div class="panel-head"><div><h3>Demo data management</h3><div class="sub">Reset or back up your sample environment.</div></div></div><p class="muted" style="font-size:13px">Use reset to restore the original fictional workers, sites and sample records. Reset permanently replaces the current data in this browser.</p><div class="actions" style="margin-top:16px">${btn('Download backup JSON','exportJSON')}${btn('Reset demo data','resetDemo','danger')}</div><div style="margin-top:18px;padding-top:15px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)">Build status: standalone browser demo · No paid API · No external tracking · No live Bauhaus data.</div></section></div>`;
+}
+function openModal(title,html){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=html;document.getElementById('modalBackdrop').classList.add('show')}
+function closeModal(){document.getElementById('modalBackdrop').classList.remove('show')}
+function field(label,name,value='',type='text',extra=''){return `<label class="field">${label}<input name="${name}" type="${type}" value="${esc(value)}" ${extra}></label>`}
+function selectField(label,name,options,value){return `<label class="field">${label}<select name="${name}">${options.map(o=>`<option value="${esc(o.value)}" ${o.value===value?'selected':''}>${esc(o.label)}</option>`).join('')}</select></label>`}
+function siteOptions(){return db.sites.map(s=>({value:s.id,label:s.name}))}
+function workerOptions(){return db.workers.map(w=>({value:w.id,label:`${w.name} (${w.id})`}))}
+function formButtons(){return `<div class="form-actions"><button type="button" class="btn" data-action="closeModal">Cancel</button><button type="submit" class="btn primary">Save record</button></div>`}
+function addAttendance(existing=null){
+ const a=existing||{date:today(),workerId:db.workers[0]?.id||'',siteId:db.workers[0]?.siteId||db.sites[0]?.id||'',checkIn:new Date().toTimeString().slice(0,5),checkOut:'',note:''};
+ openModal(existing?'Edit attendance':'Record attendance',`<form id="attendanceForm"><input type="hidden" name="id" value="${esc(a.id||'')}"><div class="form-grid">${selectField('Worker','workerId',workerOptions(),a.workerId)}${selectField('Project site','siteId',siteOptions(),a.siteId)}${field('Date','date',a.date,'date','required')}${field('Check-in time','checkIn',a.checkIn,'time','required')}${field('Check-out time','checkOut',a.checkOut,'time')}${field('Note (optional)','note',a.note||'')}</div><div class="notice" style="margin-top:14px;margin-bottom:0">Hours are calculated from check-in and check-out. An empty check-out means the shift is still open.</div>${formButtons()}</form>`);
+}
+function addWorker(existing=null){
+ const w=existing||{name:'',role:'General Worker',siteId:db.sites[0]?.id||'',phone:'',status:'Active'};
+ openModal(existing?'Edit worker':'Register worker',`<form id="workerForm"><input type="hidden" name="id" value="${esc(w.id||'')}"><div class="form-grid">${field('Full name','name',w.name,'text','required')}${field('Role','role',w.role,'text','required')}${selectField('Assigned site','siteId',siteOptions(),w.siteId)}${field('Phone (use fictional details)','phone',w.phone||'','tel')}${selectField('Status','status',[{value:'Active',label:'Active'},{value:'Inactive',label:'Inactive'}],w.status)}</div>${formButtons()}</form>`);
+}
+function addSite(existing=null){
+ const s=existing||{name:'',location:'Benue State (sample)',manager:'',progress:0,status:'Active'};
+ openModal(existing?'Edit project site':'Add project site',`<form id="siteForm"><input type="hidden" name="id" value="${esc(s.id||'')}"><div class="form-grid">${field('Site name','name',s.name,'text','required')}${field('Location','location',s.location,'text','required')}${field('Supervisor / manager','manager',s.manager)}${field('Progress (%)','progress',s.progress,'number','min="0" max="100" required')}${selectField('Status','status',[{value:'Active',label:'Active'},{value:'On hold',label:'On hold'},{value:'Completed',label:'Completed'}],s.status)}</div>${formButtons()}</form>`);
+}
+function addReport(existing=null,preSite=''){
+ const r=existing||{date:today(),siteId:preSite||db.sites[0]?.id||'',supervisor:'',completed:'',workers:'',materials:'',issues:'',status:'Submitted'};
+ openModal(existing?'Edit daily site report':'New daily site report',`<form id="reportForm"><input type="hidden" name="id" value="${esc(r.id||'')}"><div class="form-grid">${field('Report date','date',r.date,'date','required')}${selectField('Project site','siteId',siteOptions(),r.siteId)}${field('Supervisor name','supervisor',r.supervisor,'text','required')}${field('Workers on site','workers',r.workers,'number','min="0" required')}<label class="field full">Work completed<textarea name="completed" required>${esc(r.completed)}</textarea></label><label class="field full">Materials used / delivered<textarea name="materials">${esc(r.materials||'')}</textarea></label><label class="field full">Issues, delays or safety notes<textarea name="issues">${esc(r.issues||'')}</textarea></label></div>${formButtons()}</form>`);
+}
+function formObj(form){return Object.fromEntries(new FormData(form).entries())}
+function handleFormSubmit(e){
+ e.preventDefault();const f=e.target,d=formObj(f);
+ if(f.id==='attendanceForm'){
+  if(!d.workerId||!d.siteId){toast('Select a worker and site.');return}
+  const dupe=db.attendance.find(a=>a.workerId===d.workerId&&a.date===d.date&&a.id!==d.id);
+  if(dupe&&!d.id){toast('This worker already has an attendance record for that date. Edit the existing record instead.');return}
+  if(d.checkIn&&d.checkOut&&minsBetween(d.checkIn,d.checkOut)===0){toast('Check-out must differ from check-in.');return}
+  if(d.id){db.attendance=db.attendance.map(a=>a.id===d.id?{...a,...d}:a)}else db.attendance.unshift({id:'AT-'+Date.now(),...d});
+  save();closeModal();render();toast('Attendance record saved.');
+ }
+ if(f.id==='workerForm'){
+  if(d.id){db.workers=db.workers.map(w=>w.id===d.id?{...w,...d}:w)}else{d.id='WK-'+String(1000+Math.floor(Math.random()*8999));db.workers.push(d)}
+  save();closeModal();render();toast('Worker record saved.');
+ }
+ if(f.id==='siteForm'){
+  d.progress=Number(d.progress)||0;
+  if(d.id){db.sites=db.sites.map(s=>s.id===d.id?{...s,...d}:s)}else{d.id='ST-'+String(Math.floor(10+Math.random()*90)).padStart(2,'0');db.sites.push(d)}
+  save();closeModal();render();toast('Site record saved.');
+ }
+ if(f.id==='reportForm'){
+  d.workers=Number(d.workers)||0;
+  if(d.id){db.reports=db.reports.map(r=>r.id===d.id?{...r,...d}:r)}else db.reports.unshift({id:'SR-'+Date.now().toString().slice(-6),...d,createdAt:new Date().toISOString()});
+  save();closeModal();render();toast('Site report saved.');
+ }
+}
+function csvCell(v){let s=String(v??'');if(/^[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'}
+function download(name,content,type='text/csv;charset=utf-8;'){const blob=new Blob(['\ufeff',content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function toCSV(rows,columns){return [columns.map(c=>csvCell(c.label)).join(','),...rows.map(r=>columns.map(c=>csvCell(typeof c.value==='function'?c.value(r):r[c.key])).join(','))].join('\r\n')}
+function exportKind(kind){
+ let rows=[],cols=[],filename=kind;
+ if(kind==='attendance'){rows=db.attendance;cols=[{label:'Record ID',key:'id'},{label:'Worker ID',key:'workerId'},{label:'Worker',value:r=>workerName(r.workerId)},{label:'Site ID',key:'siteId'},{label:'Site',value:r=>siteName(r.siteId)},{label:'Date',key:'date'},{label:'Check-in',key:'checkIn'},{label:'Check-out',key:'checkOut'},{label:'Hours worked',value:r=>r.checkOut?(minsBetween(r.checkIn,r.checkOut)/60).toFixed(2):'Open shift'},{label:'Note',key:'note'}]}
+ if(kind==='workers'){rows=db.workers;cols=[{label:'Worker ID',key:'id'},{label:'Name',key:'name'},{label:'Role',key:'role'},{label:'Site ID',key:'siteId'},{label:'Site',value:r=>siteName(r.siteId)},{label:'Phone',key:'phone'},{label:'Status',key:'status'}]}
+ if(kind==='sites'){rows=db.sites;cols=[{label:'Site ID',key:'id'},{label:'Site name',key:'name'},{label:'Location',key:'location'},{label:'Manager',key:'manager'},{label:'Progress (%)',key:'progress'},{label:'Status',key:'status'}]}
+ if(kind==='reports'){rows=db.reports;cols=[{label:'Report ID',key:'id'},{label:'Date',key:'date'},{label:'Site ID',key:'siteId'},{label:'Site',value:r=>siteName(r.siteId)},{label:'Supervisor',key:'supervisor'},{label:'Workers',key:'workers'},{label:'Work completed',key:'completed'},{label:'Materials',key:'materials'},{label:'Issues',key:'issues'},{label:'Status',key:'status'}]}
+ if(kind==='todayAttendance'){rows=todayRows();cols=[{label:'Worker',value:r=>workerName(r.workerId)},{label:'Worker ID',key:'workerId'},{label:'Site',value:r=>siteName(r.siteId)},{label:'Date',key:'date'},{label:'Check-in',key:'checkIn'},{label:'Check-out',key:'checkOut'},{label:'Hours',value:r=>r.checkOut?(minsBetween(r.checkIn,r.checkOut)/60).toFixed(2):'Open shift'}]}
+ download(`bauhaus-demo-${filename}-${today()}.csv`,toCSV(rows,cols));toast('CSV export downloaded.');
+}
+function exportJSON(){download(`bauhaus-demo-backup-${today()}.json`,JSON.stringify({exportedAt:new Date().toISOString(),notice:'Fictional demo data. Not an official Bauhaus record.',...db},null,2),'application/json;charset=utf-8;');toast('JSON backup downloaded.')}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),3000)}
+function navigate(page){currentPage=page;render()}
+function resetDemo(){if(confirm('Reset this browser to the original fictional demo data? Current changes will be replaced.')){db=structuredClone(seed);save();render();toast('Demo data reset.');}}
+document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-page]');if(b)navigate(b.dataset.page)});
+document.getElementById('app').addEventListener('click',e=>{
+ const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action;
+ if(a==='addAttendance')return addAttendance();
+ if(a==='addWorker')return addWorker();
+ if(a==='addSite')return addSite();
+ if(a==='addReport')return addReport();
+ if(a.startsWith('addReportSite:'))return addReport(null,a.split(':')[1]);
+ if(a.startsWith('checkout:')){const id=a.split(':')[1],row=db.attendance.find(x=>x.id===id);if(row){const now=new Date();row.checkOut=now.toTimeString().slice(0,5);if(row.checkOut===row.checkIn){toast('Check-out time matched check-in; edit the record if needed.');return}save();render();toast('Worker checked out. Hours updated.')}return}
+ if(a.startsWith('editAttendance:'))return addAttendance(db.attendance.find(x=>x.id===a.split(':')[1]));
+ if(a.startsWith('editWorker:'))return addWorker(db.workers.find(x=>x.id===a.split(':')[1]));
+ if(a.startsWith('editSite:'))return addSite(db.sites.find(x=>x.id===a.split(':')[1]));
+ if(a.startsWith('editReport:'))return addReport(db.reports.find(x=>x.id===a.split(':')[1]));
+ if(a.startsWith('reviewReport:')){const r=db.reports.find(x=>x.id===a.split(':')[1]);if(r){r.status='Reviewed';save();render();toast('Report marked as reviewed.')}return}
+ if(a==='goAttendance')return navigate('attendance');
+ if(a==='goSites')return navigate('sites');
+ if(a==='goReports')return navigate('reports');
+ if(a==='exportAttendance')return exportKind('todayAttendance');
+ if(a==='exportWorkers')return exportKind('workers');
+ if(a==='exportSites')return exportKind('sites');
+ if(a==='exportReports')return exportKind('reports');
+ if(a.startsWith('export:'))return exportKind(a.split(':')[1]);
+ if(a==='exportJSON')return exportJSON();
+ if(a==='resetDemo')return resetDemo();
+ if(a==='clearReportDate'){const f=document.getElementById('reportFilterDate');if(f)f.value='';render();return}
+});
+document.getElementById('app').addEventListener('submit',handleFormSubmit);
+document.getElementById('app').addEventListener('input',e=>{if(['workerSearch','filterAttendanceSearch','reportSearch'].includes(e.target.id)){const id=e.target.id,val=e.target.value,start=e.target.selectionStart;render();const n=document.getElementById(id);if(n){n.focus();n.setSelectionRange(start,start)}}});
+document.getElementById('app').addEventListener('change',e=>{if(['filterDate','filterSite','reportFilterDate','reportFilterSite'].includes(e.target.id)){const id=e.target.id,val=e.target.value;render();const n=document.getElementById(id);if(n)n.value=val}});
+document.getElementById('modalClose').addEventListener('click',closeModal);
+document.getElementById('modalBackdrop').addEventListener('click',e=>{if(e.target.id==='modalBackdrop')closeModal()});
+document.getElementById('modalBody').addEventListener('click',e=>{if(e.target.closest('[data-action="closeModal"]'))closeModal()});
+document.getElementById('exportTop').addEventListener('click',()=>exportKind('attendance'));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+render();
+</script>
+</body>
+</html>
